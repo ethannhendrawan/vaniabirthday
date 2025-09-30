@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Vania 🎂</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f6f4;
+      color: #2e3d35;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #4a665a;
+      margin-top: 40px;
+    }
+    .candle {
+      position: relative;
+      margin: 40px auto;
+      width: 60px;
+      height: 120px;
+      background: #fff;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+    .flame {
+      width: 20px;
+      height: 30px;
+      background: radial-gradient(circle, #ffdf91, #ff914d);
+      border-radius: 50%;
+      margin: -40px auto 10px;
+      animation: flicker 0.3s infinite alternate;
+    }
+    @keyframes flicker {
+      from { transform: scale(1); opacity: 1; }
+      to { transform: scale(1.2); opacity: 0.8; }
+    }
+    button {
+      padding: 12px 24px;
+      margin-top: 20px;
+      background: #a3b18a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happy Birthday, Vania! 🎉</h1>
+  <p>Click the candle to blow it out and make a wish ✨</p>
+
+  <div class="candle" onclick="blowOut()">
+    <div class="flame" id="flame"></div>
+  </div>
+
+  <p id="wish" style="display:none; font-size:1.2em; margin-top:20px;">
+    🌟 Make a wish, Vania! 🌟
+  </p>
+
+  <a href="jar.html"><button id="next">Open Your Memory Jar 💌</button></a>
+
+  <script>
+    function blowOut() {
+      document.getElementById("flame").style.display = "none";
+      document.getElementById("wish").style.display = "block";
+      document.getElementById("next").style.display = "inline-block";
+    }
+  </script>
+</body>
+</html>

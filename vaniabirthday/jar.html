@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vania's Memory Jar 🌿</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f6f4;
+      color: #2e3d35;
+      padding: 20px;
+    }
+    h1 { color: #4a665a; }
+    .note {
+      display: inline-block;
+      min-width: 150px;
+      max-width: 250px;
+      padding: 15px;
+      background: #a3b18a;
+      margin: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+      vertical-align: top;
+    }
+    .note:hover { transform: scale(1.05); }
+    .message {
+      display: none;
+      background: #e9f0e6;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #2e3d35;
+    }
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #4a665a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌿 Vania’s Memory Jar 🌿</h1>
+  <p>Click a note to open a memory 💌</p>
+
+  <!-- Example notes -->
+  <div class="note" onclick="openNote(this)">
+    <div class="message">
+      💌 Happy birthday, bb!  
+      I just wanna say, I’m so lucky to have you.  
+      I know I’m not always the best boyfriend, but thank you for always being patient.  
+      Wishing you a year of happiness and amazing opportunities.  
+      I’ll always support you. I love you bb 💚
+    </div>
+  </div>
+
+  <div class="note" onclick="openNote(this)">
+    <div class="message">
+      🌸 Thank you for being such an important part of my life. You inspire me every day.
+    </div>
+  </div>
+
+  <div class="note" onclick="openNote(this)">
+    <div class="message">
+      🎂 Let’s make this year unforgettable with new adventures and memories together!
+    </div>
+  </div>
+
+  <a href="future.html"><button>Go to the Next Page ➡️</button></a>
+
+  <script>
+    function openNote(note) {
+      let message = note.querySelector(".message");
+      message.style.display = message.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

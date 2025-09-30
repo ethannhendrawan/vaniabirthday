@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memories & Bucket List ✨</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f6f4;
+      color: #2e3d35;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #4a665a;
+    }
+
+    /* Polaroid styling */
+    .polaroid-wall {
+      margin: 30px 0;
+    }
+    .polaroid {
+      display: inline-block;
+      background: white;
+      padding: 10px;
+      margin: 15px;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+      border-radius: 6px;
+      width: 180px;
+      transition: transform 0.2s;
+    }
+    .polaroid:hover {
+      transform: rotate(-2deg) scale(1.05);
+    }
+    .polaroid img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .caption {
+      font-size: 14px;
+      margin-top: 8px;
+      color: #4a665a;
+    }
+
+    /* Bucket list styling */
+    .bucket-list {
+      margin: 40px auto;
+      text-align: left;
+      max-width: 400px;
+      background: #e9f0e6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    .bucket-list h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .bucket-list ul {
+      list-style: none;
+      padding: 0;
+    }
+    .bucket-list li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    .bucket-list input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      accent-color: #4a665a;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Our Memories & Future Plans ✨</h1>
+  <p>Some memories we’ve made… and some we’re yet to create 💚</p>
+
+  <!-- Polaroid Wall with your images -->
+  <div class="polaroid-wall">
+    <div class="polaroid">
+      <img src="images/vania1.png" alt="Memory 1">
+      <div class="caption">scotus's pick</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/vania2.png" alt="Memory 2">
+      <div class="caption">vidya's pick</div>
+    </div>
+    <div class="polaroid">
+      <img src="images/vania3.jpg" alt="Memory 3">
+      <div class="caption">ethan's pick</div>
+    </div>
+  </div>
+
+  <!-- Bucket List -->
+  <div class="bucket-list">
+    <h2>🌿 Our Bucket List 🌿</h2>
+    <ul>
+      <li><input type="checkbox"> Staycation together 🏨</li>
+      <li><input type="checkbox"> Grab matcha 🍵</li>
+      <li><input type="checkbox"> Late-night walk 🌙</li>
+      <li><input type="checkbox"> Picnic in the park 🌸</li>
+      <li><input type="checkbox"> Movie marathon 🎬</li>
+      <li><input type="checkbox"> Travel together ✈️</li>
+    </ul>
+  </div>
+
+  <h2 style="margin-top:40px; color:#4a665a;">💌 Can’t wait for all that’s ahead with you, Vania 💌</h2>
+</body>
+</html>

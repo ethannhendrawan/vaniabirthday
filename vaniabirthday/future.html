@@ -1,109 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Memories & Bucket List ✨</title>
+  <meta charset="UTF-8" />
+  <title>Memories & Future Wishes ✨</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
   <style>
+    :root {
+      --bg:#f3f6f4; --ink:#2e3d35; --muted:#5b6b63;
+      --accent:#4a665a; --chip:#a3b18a; --card:#e9f0e6; --white:#fff;
+    }
+    * { box-sizing:border-box; }
     body {
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f3f6f4;
-      color: #2e3d35;
-      padding: 20px;
+      margin:0; padding:20px; background:var(--bg); color:var(--ink);
+      font-family:'Segoe UI', sans-serif; text-align:center;
     }
-    h1, h2 {
-      color: #4a665a;
-    }
+    h1,h2 { color:var(--accent); }
 
-    /* Polaroid styling */
-    .polaroid-wall {
-      margin: 30px 0;
+    .grid { display:grid; gap:16px; max-width:1100px; margin:0 auto; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    .wish {
+      text-align:left; background:var(--white); border-radius:16px; padding:16px;
+      box-shadow:0 6px 14px rgba(0,0,0,.08); display:flex; flex-direction:column; gap:10px;
     }
-    .polaroid {
-      display: inline-block;
-      background: white;
-      padding: 10px;
-      margin: 15px;
-      box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
-      border-radius: 6px;
-      width: 180px;
-      transition: transform 0.2s;
+    .who { display:flex; align-items:center; gap:10px; }
+    .avatar {
+      width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,#b7c4af,#8fa08a);
+      display:grid; place-items:center; color:#fff; font-weight:800;
     }
-    .polaroid:hover {
-      transform: rotate(-2deg) scale(1.05);
-    }
-    .polaroid img {
-      width: 100%;
-      border-radius: 4px;
-    }
-    .caption {
-      font-size: 14px;
-      margin-top: 8px;
-      color: #4a665a;
-    }
+    .name { font-weight:800; color:var(--accent); }
+    .tag { font-size:12px; color:var(--muted); }
+    .text { background:var(--card); border-radius:10px; padding:12px; white-space:pre-wrap; }
+    img.thumb { width:100%; border-radius:10px; margin-top:8px; }
 
-    /* Bucket list styling */
-    .bucket-list {
-      margin: 40px auto;
-      text-align: left;
-      max-width: 400px;
-      background: #e9f0e6;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    /* Family highlight */
+    .family-card {
+      border:3px solid #d4af37; background:#fffbe6;
+      box-shadow:0 0 15px rgba(212,175,55,0.4);
+      grid-column:span 2;
     }
-    .bucket-list h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .bucket-list ul {
-      list-style: none;
-      padding: 0;
-    }
-    .bucket-list li {
-      margin: 10px 0;
-      font-size: 16px;
-    }
-    .bucket-list input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.2);
-      accent-color: #4a665a;
-    }
+    .family-card .name { color:#b8860b; font-size:1.1em; }
+
+    .toolbar { margin-top:30px; }
+    .btn { display:inline-block; padding:10px 16px; background:var(--accent); color:#fff; border-radius:10px; text-decoration:none; }
+    .btn.secondary { background:#8a9a86; }
   </style>
 </head>
 <body>
-  <h1>✨ Our Memories & Future Plans ✨</h1>
-  <p>Some memories we’ve made… and some we’re yet to create 💚</p>
+  <h1>✨ Our Future Wishes ✨</h1>
+  <p>Messages and blessings for the years ahead 💚</p>
 
-  <!-- Polaroid Wall with your images -->
-  <div class="polaroid-wall">
-    <div class="polaroid">
-      <img src="images/vania1.png" alt="Memory 1">
-      <div class="caption">scotus's pick</div>
-    </div>
-    <div class="polaroid">
-      <img src="images/vania2.png" alt="Memory 2">
-      <div class="caption">vidya's pick</div>
-    </div>
-    <div class="polaroid">
-      <img src="images/vania3.jpg" alt="Memory 3">
-      <div class="caption">ethan's pick</div>
-    </div>
+  <section class="grid" aria-label="Future wishes in fixed order">
+
+    <!-- Scotus -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">S</div>
+        <div>
+          <div class="name">Scotus</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Wishing you a year of happiness, good health, and good things.
+God Bless you bb!!
+I’ll always support you.
+I love you bb</div>
+    </article>
+
+    <!-- Vidya -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">V</div>
+        <div>
+          <div class="name">Vidya</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <img src="images/vania2.jpg" class="thumb" alt="Vidya future memory">
+      <div class="text">I’m so grateful to know you, and I hope at 22 you’ll always be happy—keep slaying, keep shining, and forever be that girl. May you always be surrounded by love. I also hope we’ll stay close forever, until we grow old, until we get married, until we have kids—basically until forever and ever. Wishing you nothing but the best!
+
+Love you, bb ❤</div>
+    </article>
+
+    <!-- Ethan -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">E</div>
+        <div>
+          <div class="name">Ethan</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Hoping you achieve what you want for this year especially 2026, it is going to be one hell of a year but for sure you will make it out alive and well, wishing you all the best in your career, academic, and everything you want in life. You deserve every one of it !!!</div>
+    </article>
+
+    <!-- Syifa -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">S</div>
+        <div>
+          <div class="name">Syifa</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Wishing you nothing but happiness, good health, and success in the year ahead.
+I’m so proud of how far you’ve come and can’t wait to see where life takes you next.
+Cheers to more adventures, more growth, and more unforgettable moments! 🥂</div>
+    </article>
+
+    <!-- Family -->
+    <article class="wish family-card">
+      <div class="who">
+        <div class="avatar">F</div>
+        <div>
+          <div class="name">Vania's Family</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Happy Bday Dear Cece
+Panjang umur, sehat slalu, diberkati untuk jadi berkat bagi sekelilingmu. 
+Smoga smua rancangan Tuhan digenapi dalam hidupmu.
+Walaupun kita terpisah dr barat ke timur, tapi doa doa kami slalu ada untukmu.
+Love u always 
+
+“ The Lord bless you and keep you” (Num 6 :24)</div>
+    </article>
+
+    <!-- Cheery -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">C</div>
+        <div>
+          <div class="name">Cheery</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">semoga semakin kaya dalam segala hal dan diberikan kelancaran dalam apa pun termasuk skripsi</div>
+    </article>
+
+    <!-- Stevia -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">S</div>
+        <div>
+          <div class="name">Stevia</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">happyyy birthdayy vaniaa🥺🥺❤
+
+i hope all the happiness in life always finds its way to youu and may God bless you abundantly with love, health, joy, and successs every single dayy
+
+omg cant believe my first mom di aiesec ultah
+thank youuu for letting me get involved in a lot of different BA programs
+im so happyy skrgg kita bisa 1 kantorr
+
+semoga km langgeng terus dengan mas pacar yaah dan kalo pas di jogja ayo mainnn xixixi
+
+once again happyy birthdayy
+may this new year of your life be filled with endless joy, growth, and exciting adventuress lov❤</div>
+    </article>
+
+    <!-- Ellen -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">E</div>
+        <div>
+          <div class="name">Ellen</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Hepi besdee Vaniaa💕
+Thank you for all the laughter and help you’ve given me this year. The older you get, I hope you become happier, healthier, and shine brighter than ever ✨
+GBU🙏</div>
+    </article>
+
+    <!-- Rio -->
+    <article class="wish">
+      <div class="who">
+        <div class="avatar">R</div>
+        <div>
+          <div class="name">Rio</div>
+          <div class="tag">Future wish</div>
+        </div>
+      </div>
+      <div class="text">Happy Birthday Vaniaa 🥳! Semoga sehat selalu, banyak rejeki, dilancarkan semua kerjaan yang ada 🙏. God bless and wish you all the best 🥳🍕🍩</div>
+    </article>
+
+  </section>
+
+  <div class="toolbar">
+    <a href="jar.html" class="btn secondary">⬅️ Back</a>
+    <a href="index.html" class="btn">🏠 Home</a>
   </div>
-
-  <!-- Bucket List -->
-  <div class="bucket-list">
-    <h2>🌿 Our Bucket List 🌿</h2>
-    <ul>
-      <li><input type="checkbox"> Staycation together 🏨</li>
-      <li><input type="checkbox"> Grab matcha 🍵</li>
-      <li><input type="checkbox"> Late-night walk 🌙</li>
-      <li><input type="checkbox"> Picnic in the park 🌸</li>
-      <li><input type="checkbox"> Movie marathon 🎬</li>
-      <li><input type="checkbox"> Travel together ✈️</li>
-    </ul>
-  </div>
-
-  <h2 style="margin-top:40px; color:#4a665a;">💌 Can’t wait for all that’s ahead with you, Vania 💌</h2>
 </body>
 </html>
